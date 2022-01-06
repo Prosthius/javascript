@@ -2,13 +2,13 @@
 let = "variable"; 
 
 /*To name a variable*/
-variable = "variableName"; 
+variable = "data"; 
 
 /*To create and name a variable*/
-let variable = "variableName";
+let variable = "data";
 
 /*To create and/or name multiple variables at once*/
-let variable = "variableName",
+let variable = "data",
     VariableNameOnly;
 
 /*To copy data from one variable to another*/
