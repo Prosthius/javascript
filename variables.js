@@ -36,4 +36,5 @@ let $
 let _
 let variableName2
 
-
+/*To display variable data*/
+alert(variable);
