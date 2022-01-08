@@ -90,3 +90,62 @@ NaN5
 //However NaN is considered a number
 typeof NaN;
 "number"
+
+/*Infinity (or -Infinity) is the value JavaScript will return 
+if you calculate a number outside the largest possible number*/
+9**999;
+Infinity
+//Division by 0 also results in Infinity
+2 / 0;
+Infinity
+//Infinity is a number
+typeof Infinity;
+"number"
+
+/*Hexadecimal*/
+//JS interprets numeric constants as hexidecimal if they are preceded by 0x
+0xFF;
+255
+/*
+Never write a number with a leading zero (like 07).
+Some JavaScript versions interpret numbers as octal if they are written with a leading zero.
+*/
+
+/*By default, JavaScript displays numbers as base 10 decimals.
+But you can use the toString() method to output numbers from base 2 to base 36.
+Hexadecimal is base 16(0-9, a-f). Decimal is base 10. Octal is base 8. Binary is base 2.*/
+let myNumber = 32;
+myNumber.toString(10);
+myNumber.toString(32);
+myNumber.toString(16);
+myNumber.toString(8);
+myNumber.toString(2);
+
+/*Numbers as objects*/
+//Numbers can be defined as objects with the keyword 'new'
+let y = new Number(123);
+y;
+Number { 123 }
+
+/*
+Do not create Number objects.
+The new keyword complicates the code and slows down execution speed.
+Number Objects can produce unexpected results:
+*/
+let x = 500;
+let y = new Number(500);
+
+x==y;
+true
+
+x===y;
+false
+
+//Comparing two JavaScript objects always returns false.
+let x = new Number(500);
+let y = new Number(500);
+
+x==y;
+false
+x===y;
+false
