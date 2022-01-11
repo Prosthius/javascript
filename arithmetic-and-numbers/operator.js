@@ -21,6 +21,18 @@ Comparison Operators
 "1" == 1; true
 "1" === 1: false
 
+/*
+Number Operators
+*/
+toFixed() //Round a number to a fixed number of decimal places e.g:
+
+let lotsOfDecimals = 1.29847294748;
+let twoDecimals = lotsOfDecimals.toFixed(2);
+twoDecimals;
+"1.30"
+
+
+
 typeof //Shows datatype
 const //Sets unchangeable variable
 let //Sets changeable variable
