@@ -67,3 +67,12 @@ let isGreater = 4 > 1;
 alert( isGreater ); // true (the comparison result is "yes")
 
 
+
+/*
+The "null" value
+*/
+//Contains only the 'null' value
+//Null represents "nothing", "empty" or "value unknown"
+let age = null; //States that 'age' is unknown
+
+
