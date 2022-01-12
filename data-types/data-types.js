@@ -52,3 +52,18 @@ alert( `Hello, ${name}!` ); // Hello, John!
 alert( `the result is ${1 + 2}` ); // the result is 3
 
 
+
+/*
+Boolean (logical type)
+*/
+//Only has two values:
+true, false
+
+let nameFieldChecked = true; // yes, name field is checked
+let ageFieldChecked = false; // no, age field is not checked
+
+//Can be used as a result of comparison
+let isGreater = 4 > 1;
+alert( isGreater ); // true (the comparison result is "yes")
+
+
