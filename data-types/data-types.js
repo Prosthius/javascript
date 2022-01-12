@@ -76,3 +76,17 @@ The "null" value
 let age = null; //States that 'age' is unknown
 
 
+
+/*
+The "undefined" value
+*/
+//Contains only the 'undefined' value
+//Means "value is not assigned"
+//If a variable is declared, but not assigned, its value is 'undefined'
+let age;
+alert(age); // shows "undefined"
+
+//Reserved as a default initial value for unassigned things
+
+
+
