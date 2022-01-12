@@ -1,3 +1,5 @@
+//https://javascript.info/types
+
 /*
 Summary
 */
