@@ -93,7 +93,7 @@ console.log(output);  // I like the song".
 // https://www.w3schools.com/js/js_string_methods.asp
 
 /*JavaScript String Length*/
-//The length proprety returns the length of a string:
+//The length property returns the length of a string:
 let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let length = txt.length; //26
 
@@ -112,7 +112,7 @@ let str = "Apple, Banana, Kiwi";
 let part = str.slice(7, 13); //"Banana"
 
 /*
-JS counts starts from 0
+JS counts from 0
 */
 
 //Can be used backwards
@@ -148,4 +148,113 @@ let part = str.substr(-4); // Kiwi
 //replace() method replaces a specified value with another value in a string:
 let text = "Please visit Microsoft!";
 let newText = text.replace("Microsoft", "W3Schools");
-//Returns a new string rather than alter the one it is called on
+//Does not change the string it is called on, instead, it returns a new string
+
+//By default, only replaces the first match:
+let text = "Please visit Microsoft and Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools"); //"Please visit W3Schools and Microsoft!"
+
+//By default, replace() method is case sensitive:
+let text = ""Please visit W3Schools and W3Schools!"Please visit Microsoft!";
+let newText = text.replace("MICROSOFT", "W3Schools"); //"Please visit Microsoft!"
+//To make case insensitive use /i:
+let text = "Please visit Microsoft!";
+let newText = text.replace(/MICROSOFT/i, "W3Schools"); //"Please visit W3Schools!"
+
+//Regular expressions are written without quotes//
+
+//To replace all matches, use a regular expression with a /g flag (global match):
+let text = "Please visit Microsoft and Microsoft!";
+let newText = text.replace(/Microsoft/g, "W3Schools"); //"Please visit W3Schools and W3Schools!"
+
+
+/*Converting to Upper and Lower Case*/
+toUpperCase() //Converts to upper case
+toLowerCase() //Converts to lower case
+
+//Upper case example:
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase(); //"HELLO WORLD!"
+
+//Lower case example:
+let text1 = "Hello World!";
+let text2 = text1.toLowerCase(); //"hello world!"
+
+
+
+/*concat()*/
+//Joins two or more strings together:
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2); //"Hello World"
+
+//All string methods return a new string. They don't modify the original string.
+//Strings are immutable: Strings cannot be changed, only replaced.
+
+
+
+/*trim()*/
+//Removes whitespace from both sides of a string:
+let text1 = "      Hello World!      ";
+let text2 = text1.trim(); //"Hello World!"
+
+
+
+/*String Padding*/
+//Pad either side of a string with a number, string or variable
+padStart()
+padEnd()
+
+//padStart() example:
+let text = "5";
+let padded = text.padStart(4,0); //"0005"
+
+//padEnd() example:
+let text = "5";
+let padded = text.padEnd(4,0); //"5000"
+
+
+
+/*Extracting String Characters*/
+//Three methods:
+charAt(position)
+charCodeAt(position)
+Property access []
+
+//charAt()
+//Returns the character at a specified index (positon) in a string:
+let text = "HELLO WORLD";
+let char = text.charAt(0); //"H"
+
+
+//charCodeAt()
+//Returns the unicode of the character at a specified index in a string:
+//Returns a UTF-16 code (an integer between 0 and 65535)
+let text = "HELLO WORLD";
+let char = text.charCodeAt(0); //72
+
+
+//Property Access
+//ECMAScript 5 (2009) allows property access [ ] on strings:
+let text = "HELLO WORLD";
+let char = text[0]; //"H"
+
+//Property access might be unpredictable:
+//It makes strings look like arrays (but they are not)
+//If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+//It is read only. str[0] = "A" gives no error (but does not work!)
+let text = "HELLO WORLD";
+text[0] = "A";    // Gives no error, but does not work
+
+
+
+/*split()*/
+//A string can be converted to an array with this method:
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|")    // Split on pipe 
+
+//If the separator is omitted, the returned array will contain the whole string in index [0].
+
+//If the separator is "", the returned array will be an array of single characters:
+text.split("")
