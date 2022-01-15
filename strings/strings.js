@@ -88,4 +88,64 @@ const output = 'I like the song.\nI gave it a score of 90%.';
 console.log(output);  // I like the song".
                       // I gave it a score of 90%.
 
-                    
+
+
+// https://www.w3schools.com/js/js_string_methods.asp
+
+/*JavaScript String Length*/
+//The length proprety returns the length of a string:
+let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = txt.length; //26
+
+
+/*Extracting String Parts*/
+//Three methods
+slice(start, end)
+substring(start, end)
+substr(start, length)
+
+//slice()
+//Extracts a part of a string and returns the extracted part in a new string
+//Takes two parameters: the start position and end position (end not included)
+//Below example slices out part of string from position 7 to 12
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(7, 13); //"Banana"
+
+/*
+JS counts starts from 0
+*/
+
+//Can be used backwards
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(-12, -6); //"Banana"
+
+//Can omit second parameter
+let part = str.slice(7); // "Banana, Kiwi"
+
+let part = str.slice(-12); // "Banana, Kiwi"
+
+
+/*substring()*/
+//Same as slice(), but cannot accept negative indexes
+
+
+/*substr()*/
+//Same as slice(), but second parameter specifies the length of the extracted part
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7, 6); // "Banana"
+
+//If you omit the second parameter, the rest of the string will be sliced out
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7); // "Banana, Kiwi"
+
+//If the first parameter is negative, the position counts from the end of the string.
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(-4); // Kiwi
+
+
+
+/*Replacing String Content*/
+//replace() method replaces a specified value with another value in a string:
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+//Returns a new string rather than alter the one it is called on
