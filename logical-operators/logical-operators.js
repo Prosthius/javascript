@@ -120,7 +120,7 @@ result = value1 && value2 && value3;
 /* Evaluates operands from left to right. */
 /* Converts each operand to boolean. */
 /* If the result is false, stops and returns the original value of the first falsy operand. */
-/* If all operands are truthy, retuns the last operand. */
+/* If all operands are truthy, returns the last operand. */
 
 //Examples:
 
