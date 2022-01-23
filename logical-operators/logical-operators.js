@@ -8,6 +8,12 @@ Logical Operators
 !   // NOT
 ??  // Nullish Coalescing
 
+/*
+Precedence order (Highest precedence to lowest precedence)
+*/
+NOT !
+AND &&
+OR ||
 
 
 /*
@@ -134,7 +140,7 @@ alert( 1 && 2 && 3 ); // 3, the last one
 
 
 /*Precedence*/
-//AND had higher precedence than OR:
+//AND has higher precedence than OR:
 a && b || c && d //Is the same as:
 (a && b) || (c && d)
 
@@ -144,3 +150,28 @@ a && b || c && d //Is the same as:
 /*
 ! NOT
 */
+result = !value;
+
+//Accepts a single argument and does the following:
+
+//1. Converts the operand to boolean type: true/false.
+//2. Returns the inverse value
+//Example:
+
+alert( !true ); // false
+alert( !0 ); // true
+
+//Double NOT !! can be used to convert a value to a boolean type:
+alert( !!"non-empty string" ); // true
+alert( !!null ); // false
+
+//The first NOT converts the value to boolean and returns the inverse.
+//The second NOT inverses it again
+
+//Double NOT !! can also be written as:
+alert( Boolean("non-empty string") ); // true
+alert( Boolean(null) ); // false
+
+/*Precedence*/
+//NOT ! has the highest precedence of all logical operators.
+//Will always execute before && or ||
