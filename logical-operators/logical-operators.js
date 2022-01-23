@@ -82,3 +82,65 @@ stopping the alert from being run. */
 /*
 && AND
 */
+result = a && blur;
+
+//In classical programming, AND returns 'true' if both operands are truthy, and 'false' if both operands are falsy:
+alert( true && true );   // true
+alert( false && true );  // false
+alert( true && false );  // false
+alert( false && false ); // false
+
+//Example with 'if':
+let hour = 12;
+let minute = 30;
+
+if (hour == 12 && minute == 30) {
+  alert( 'The time is 12:30' );
+}
+
+else {
+    alert( 'The time is not 12:30')
+}
+
+//Any value is allowed as an operand of AND:
+if (1 && 0) { // evaluated as true && false
+    alert( "won't work, because the result is falsy" );
+  }
+
+//Given multiple AND'ed values:
+result = value1 && value2 && value3;
+
+//The AND && operator does the following:
+/* Evaluates operands from left to right. */
+/* Converts each operand to boolean. */
+/* If the result is false, stops and returns the original value of the first falsy operand. */
+/* If all operands are truthy, retuns the last operand. */
+
+//Examples:
+
+// if the first operand is truthy,
+// AND returns the second operand:
+alert( 1 && 0 ); // 0
+alert( 1 && 5 ); // 5
+
+// if the first operand is falsy,
+// AND returns it. The second operand is ignored
+alert( null && 5 ); // null
+alert( 0 && "no matter what" ); // 0
+
+alert( 1 && 2 && null && 3 ); // null
+
+alert( 1 && 2 && 3 ); // 3, the last one
+
+
+/*Precedence*/
+//AND had higher precedence than OR:
+a && b || c && d //Is the same as:
+(a && b) || (c && d)
+
+//Even if possible, don't interchange 'if' and &&
+
+
+/*
+! NOT
+*/
