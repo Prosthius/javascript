@@ -71,7 +71,7 @@ switch (expression) {
     actually, just run this code
 }
 //Example
-//Button in HMTL with options for weather
+//Button in HTML with options for weather
 
 //HTML
 <label for="weather">Select the weather type today: </label>
