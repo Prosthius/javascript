@@ -57,58 +57,76 @@ if (time < 10) {
 
 /*switch*/
 switch (expression) {
-  case choice1:
-    run this code
-    break;  //Stops the browser from executing code if the previous code matches the expression/value, moves on to below the switch statement 
-
-  case choice2:
-    run this code instead
-    break;
-
-  // include as many cases as you like
-
-  default:  //The default option to run if none of the choices match. It is optional
-    actually, just run this code
+	case x:
+		// execute case x code block
+		break;
+	case y:
+		// execute case y code block
+		break;
+	default:
+		// execute default code block
 }
 //Example
-//Button in HTML with options for weather
+const day = new Date().getDay(); //new Date() finds the day of the week, getDay() prints a number for the day, 0 - 6
 
-//HTML
-<label for="weather">Select the weather type today: </label>
-<select id="weather">
-  <option value="">--Make a choice--</option>
-  <option value="sunny">Sunny</option>
-  <option value="rainy">Rainy</option>
-  <option value="snowing">Snowing</option>
-  <option value="overcast">Overcast</option>
-</select>
-<p></p>
-
-const select = document.querySelector('select');
-const para = document.querySelector('p'); 
-
-select.addEventListener('change', setWeather);
-
-function setWeather() {
-  const choice = select.value;
-
-  switch (choice) {
-    case 'sunny':
-      para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
-      break;
-    case 'rainy':
-      para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
-      break;
-    case 'snowing':
-      para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
-      break;
-    case 'overcast':
-      para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
-      break;
-    default:
-      para.textContent = '';
-  }
+switch (day) {
+	case 0:
+		console.log("It's Sunday, time to relax!");
+		break;
+	case 1:
+		console.log("Happy Monday!");
+		break;
+	case 2:
+		console.log("It's Tuesday. You got this!");
+		break;
+	case 3:
+		console.log("Hump day already!");
+		break;
+	case 4:
+		console.log("Just one more day 'til the weekend!");
+		break;
+	case 5:
+		console.log("Happy Friday!");
+		break;
+	case 6:
+		console.log("Have a wonderful Saturday!");
+		break;
+	default:
+		console.log("Something went horribly wrong...");
 }
+//Multiple Cases
+// Get number corresponding to the current month, with 0 being January and 11 being December
+const month = new Date().getMonth();
+
+switch (month) {
+	// December, January, February
+	case 11:
+	case 0:
+	case 1:
+		console.log("Summer");
+		break;
+	// March, April, May
+	case 2:
+	case 3:
+	case 4:
+		console.log("Autumn");
+		break;
+	// June, July, August
+	case 5:
+	case 6:
+	case 7:
+		console.log("Winter");
+		break;
+	// September, October, November
+	case 8:
+	case 9:
+	case 10:
+		console.log("Spring");
+		break;
+	default:
+		console.log("Something went wrong.");
+}
+
 
 
 /*Ternary or conditional operator*/
